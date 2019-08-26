@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Admin Socket</title>
+</head>
+
+<body>
+    <div class='app'>
+        <h1>Admin</h1>
+        <input type="radio" name="chk" @click="alterchannel(1)" checked>
+        <label>Canal 1</label>
+        <br>
+        <input type="radio" name="chk" @click="alterchannel(2)">
+        <label>Canal 2</label>
+
+        <h3>Alterar imagem</h3>
+        <p><button @click.prevent='alterImage(1)'>Imagem 1</button></p>
+        <p><button @click.prevent='alterImage(2)'>Imagem 2</button></p>
+
+        <hr>
+
+        <h3>Alterar nome do canal</h3>
+        <input class='form-control' type="text" v-model='nameChannel'>
+        <button @click.prevent='alterNameChannel()'>Alterar nome do canal</button>
+
+        <hr>
+
+        <h3>Alterar título</h3>
+        <input class='form-control' type="text" v-model='title'>
+        <button @click.prevent='alterTitle()'>Alterar title</button>
+
+        <hr>
+
+        <h3>Alterar descrição</h3>
+        <input type="text" v-model='description'>
+        <button @click.prevent='alterDescription()'>Alterar Descrição</button>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js'></script>
+    <script src='./app.js'></script>
+</body>
+
+</html>
